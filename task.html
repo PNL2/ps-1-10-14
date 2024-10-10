@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-10-24</title>
+    <style>
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <details>
+        <summary><a href="./1.png">1.WAP to print the non primes digits in the given number</a><br><br></summary>
+        <pre>
+            num=prompt("Enter a number: "),res='';
+            for(i of num){
+                if(i>3){
+                    div=0;
+                    for(j=2;j<=i/2;j++){
+                        if(i%j ==0){
+                            div++;
+                            break;
+                        }
+                    }
+                    if(div==1)
+                        res += i+" ";
+                }
+            }
+            console.log(res);
+        </pre>
+    </details>
+    <details>
+        <summary><a href="./2.png">2. WAP to print the count of non-prime numbers in the given number</a><br><br></summary>
+        <pre>
+            num=prompt("Enter a number: "),cnt=0;
+            for(i of num){
+                if(i>3){
+                    for(j=2;j<=i/2;j++){
+                        if(i%j ==0){
+                            cnt++;
+                            break;
+                        }
+                    }
+                }
+            }
+            console.log(cnt)
+        </pre>
+    </details>
+    <details>
+        <summary><a href="./3.png">3.WAP to print whether even number are more or odd number are more</a><br><br></summary>
+        <pre>
+            num=prompt("Enter a number: "),evenCnt=0,oddCnt=0;
+            for(i of num){
+                // if(i%2 == 0)
+                //     evenCnt++
+                // else
+                //     oddCnt++
+                (i%2 == 0)?evenCnt++:oddCnt++;
+            }
+            res=(evenCnt>oddCnt)?console.log("evens are more"):
+                (oddCnt>evenCnt)?console.log("odds are more"):
+                                 console.log("Both are equal")
+        </pre>
+    </details>
+</body>
+</html>
